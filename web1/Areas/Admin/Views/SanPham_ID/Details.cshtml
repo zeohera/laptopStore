@@ -1,0 +1,123 @@
+﻿@model web1.Models.SanPham_ID
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SanPham_ID</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenSanPham)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSanPham)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CardDoHoa.Ten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CardDoHoa.Ten)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Chip_ID1.MaCore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chip_ID1.MaCore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Loai_ID1.Loai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Loai_ID1.Loai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ManHinh_ID1.DoPhanGiai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ManHinh_ID1.DoPhanGiai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhaSanXuat_ID1.TenNhaSanXuat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhaSanXuat_ID1.TenNhaSanXuat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OCung_ID1.Loai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OCung_ID1.Loai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RAM_ID1.Loai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RAM_ID1.Loai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TinhTrang_ID1.TinhTrang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TinhTrang_ID1.TinhTrang)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

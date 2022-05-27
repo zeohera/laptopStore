@@ -1,0 +1,35 @@
+﻿@model web1.Models.CardDoHoa
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thông tin chi tiết</h2>
+
+<div>
+    <h4>Card đồ họa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ten)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Brand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brand)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Trở về danh sách", "Index")
+</p>

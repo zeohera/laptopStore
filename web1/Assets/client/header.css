@@ -1,0 +1,209 @@
+.btn-detail {
+    background-color: #af307e;
+    color: #fff;
+}
+.btn-info {
+    background-color:coral ;
+    color: #fff;
+}
+    .btn-info:hover {
+        background-color: #d64d1b;
+        color: #fff;
+    }
+
+.header_search{
+    background-color:gray;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.blnk-div-42 {
+    display: block;
+    height: 50px;
+    position: relative;
+    top: 0;
+}
+.header {
+    background: rgb(51,51,51);
+    background: radial-gradient(circle, rgba(51,51,51,1) 0%, rgba(45,48,51,1) 100%);
+    margin-bottom: 10px;
+}
+.header_bag{
+    color: white;
+    display: block;
+
+}
+
+/* apple choice */
+
+
+.item_list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.item_logo a{
+    text-decoration: none;
+    color: white ;
+    display: block;
+    font-weight: bold;
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,121,69,1) 100%);
+    background-size: 300%;
+    height: 40px;
+    width: 120px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+    transition-property: background;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+}
+
+    .item_logo a:hover {
+        background-position: right;
+        
+    }
+
+.item_category_icon{
+    cursor: pointer;
+}
+
+
+
+
+/* apple choice */
+
+@media only screen and (max-width: 750px) {
+    .hide_lg
+    {
+        display: none;
+    }
+
+    .item_list{
+        display: flex;
+        height: 40px;
+    }
+
+    .item_mobile
+    {
+        display: block;
+        color: white;
+        font-size: x-large;
+        padding: 8px;
+    }
+
+}
+
+
+@media only screen and (min-width: 751px ) {
+    
+    .container{
+        max-width: 1200px;
+        margin: auto;
+
+    }
+
+    .item{
+        text-align: center;
+        padding : 0 10px ;
+
+    }  
+
+    .item_category > a,
+    .item_category {
+        line-height: 30px;
+        display: flex;
+        color: #d6d6d6;
+        margin: auto;
+        text-decoration: none;
+        transition-property: color;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in;
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    }
+    
+    .item_category_icon{
+        transition-property: color;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in;
+    }
+
+    .sub_menu_hover{
+        position: relative;
+    }
+    .sub_menu_hover:hover .sub_menu{
+        display: block;
+    }
+    .sub_menu::before{
+        width: 100%;
+        height: 20px;
+        position: absolute;
+        top: -10px;
+        left: 0px;
+        z-index: 1000;
+        content: "";
+    }
+    .sub_menu{
+        position: absolute;
+        background-color: rgba(255, 245, 250, 0.9);
+        top: calc(100% + 10px);
+        z-index: 100;
+        border-radius: 3px;
+        display: none;
+
+    }
+
+    .sub_menu_item{
+        width: 150px;
+        display: block;
+        color: rgba(51,51,51,1);
+        padding: 0 10px;
+    }
+    a.sub_menu_item:hover{
+        text-decoration: none;
+        color: rgb(255, 52, 103);
+        background-color: rgba(255, 146, 201, 0.7);
+        border-radius: 3px;
+    }
+
+
+    .item_category > a:hover,
+    .item_category_icon:hover
+    {
+        color: white;
+    }
+
+    .item_list:first-child{
+        margin-left: 20px;
+
+    }
+    
+    .item_menu_mobile{
+        display: none;
+    }
+
+    .item_list:last-child{
+        /* margin-right: 20px; */
+
+    }
+
+    .item_category_icon{
+        font-size: x-large;
+        margin: auto;
+        
+    }
+    
+    .header_bag{
+        display: none;
+
+    }
+
+    .item_bag{
+        display: none;
+    }
+
+}

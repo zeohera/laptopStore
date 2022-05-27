@@ -1,0 +1,93 @@
+:root {
+    --box-height: 50px;
+    --maincolor: #5856d6;
+}
+
+.info-content {
+    /* height: 2000px */
+}
+
+.keycolor {
+    color: var(--maincolor);
+}
+
+.textinbox {
+    line-height: var(--box-height);
+    padding-left: 20px;
+}
+
+.detail-product {
+}
+
+.detail-product-name {
+    margin-bottom: 30px;
+}
+
+.detail-image img {
+    width: 100%;
+    /* height: 450px; */
+    border-radius: 3px;
+}
+
+.detail-product-price {
+    color: var(--maincolor);
+    background-color: whitesmoke;
+    height: var(--box-height);
+}
+
+.detail-color {
+}
+
+.color-box {
+    /* background-color: black; */
+    height: var(--box-height);
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    line-height: var(--box-height);
+}
+
+.border-box-keycolor {
+    width: 100%;
+    height: var(--box-height);
+    border-radius: 5px;
+    border: solid var(--maincolor) 2px;
+    margin: 5px;
+}
+
+.buy-content {
+    border-top: 1px solid darkgray;
+    background-color: whitesmoke;
+    bottom: 0;
+}
+
+    .buy-content a, .buy-content p {
+        font-size: small;
+    }
+
+.btn-key-color {
+    background: rgb(192,46,136);
+    background: linear-gradient(0deg, rgba(192,46,136,1) 28%, rgba(219,98,173,1) 76%);
+    color: white;
+}
+
+.btn-key-color:hover {
+    background: rgb(192, 61, 142);
+    background: linear-gradient(0deg, rgb(197, 76, 151) 28%, rgb(221, 128, 185) 76%);
+    color: white;
+}
+
+.buy-right {
+    text-align: right;
+}
+
+.bottom_adding {
+    display: block;
+    height: 130px;
+}
+.blnk-div-bottom-42 {
+    display: block;
+    height: 120px;
+    position: relative;
+    bottom: 0;
+}

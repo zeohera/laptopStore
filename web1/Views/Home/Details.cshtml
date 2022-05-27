@@ -1,0 +1,109 @@
+﻿@model web1.Models.SanPham_ID
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container info-content" style="background-color: white;">
+    <div class="row detail-product">
+        <div class="col-md-6 detail-image">
+            <img src="@Url.Content("~/Assets/images/" + Model.image)" alt="...">
+        </div>
+        <div class="col-md-6">
+            <div class="detail-product-name">
+                <h3>@Html.DisplayFor(model => model.TenSanPham)</h3>
+            </div>
+            <div class="container">
+                <table class="detail-product-table container ">
+                    <tr class="row">
+                        <th class="col-md-4">Cổng I/O</th>
+                        <td class="col-md-8">@Html.DisplayFor(model => model.Cong)</td>
+                    </tr>
+                    <tr class="row">
+                        <th class="col-md-4">Card Đồ họa</th>
+                        <td class="col-md-8">@Html.DisplayFor(model => model.CardDoHoa.Ten)</td>
+                    </tr>
+                    <tr class="row">
+                        <th class="col-md-4">Vi Xử lý</th>
+                        <td class="col-md-8">@Html.DisplayFor(model => model.Chip_ID1.MaCore)</td>
+                    </tr>
+                    <tr class="row">
+                        <th class="col-md-4">đặc điểm</th>
+                        <td class="col-md-8">@Html.DisplayFor(model => model.Loai_ID1.Loai)</td>
+                    </tr>
+                    <tr class="row">
+                        <th class="col-md-4">màn hình</th>
+                        <td class="col-md-8"> @Html.DisplayFor(model => model.ManHinh_ID1.DoPhanGiai)</td>
+                    </tr>
+                    <tr class="row">
+                        <th class="col-md-4">Sản xuất bởi</th>
+                        <td class="col-md-8">@Html.DisplayFor(model => model.NhaSanXuat_ID1.TenNhaSanXuat)</td>
+                    </tr>
+                    <tr class="row">
+                        <th class="col-md-4">Tình trạng máy</th>
+                        <td class="col-md-8">@Html.DisplayFor(model => model.TinhTrang_ID1.TinhTrang)</td>
+                    </tr>
+                    <tr class="row">
+                        <th class="col-md-4">màn hình</th>
+                        <td class="col-md-8"> full hd</td>
+                    </tr>
+                </table>
+                <hr>
+                <h5 class="keycolor ">Ưu đãi</h5>
+                <div class="detail-coupon ">
+                    <p>Giảm 1% cho khách hàng GearXMember</p>
+                    <p>ưu đãi lên đời - thu cũ đổi mới</p>
+                </div>
+                <hr>
+                @*<h5 class="keycolor">Màu</h5>
+                <div class="detail-color row">
+                    <div class=" col-6">
+                        <p class="color-box" style="background-color: black; color:whitesmoke">Black</p>
+                    </div>
+                    <div class=" col-6">
+                        <p class="color-box" style="background-color: lightgrey; color:black">Grey</p>
+                    </div>
+                </div>*@
+
+                <hr>
+                <h5 class="keycolor">Bộ nhớ</h5>
+                <div class="row">
+                    <div class="col-12 border-box-keycolor">
+                        <h5 class="textinbox">@Html.DisplayFor(model => model.RAM_ID1.DungLuong) GB - @Html.DisplayFor(model => model.RAM_ID1.Brand)</h5>
+                    </div>
+                </div>
+                <hr>
+                <h5 class="keycolor">Ổ cứng lưu trữ</h5>
+                <div class="row">
+                    <div class="col-12 border-box-keycolor">
+                        <h5 class="textinbox">@Html.DisplayFor(model => model.OCung_ID1.DungLuong) @Html.DisplayFor(model => model.OCung_ID1.Loai) @Html.DisplayFor(model => model.OCung_ID1.Brand)</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blnk-div-bottom-42">
+
+    </div>
+    <div class=" row buy-content fixed-bottom">
+        <div class="container">
+            <div class="row " style="margin-bottom: 10px;">
+                <div class="col-md-3">
+                    <p>đến cửa hàng lấy:</p>
+                    <a href="">kiểm tra những cửa hàng còn hàng</a>
+                </div>
+                <div class="col-md-3">
+                    <p>Vận chuyển <br> từ 1 tuần tới 2 tuần <br> freeship </p>
+
+                    <a href="">kiểm tra những cửa hàng còn hàng</a>
+                </div>
+                <div class="col-md-6 buy-right">
+                    <h4>@Html.DisplayFor(model => model.Gia) VND</h4>
+                    <div >
+                        <a class="btn btn-primary" href="@Url.Action("OrderNow", "ShoppingCart", new { id = Model.ID })"> Thêm vào giỏ hàng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

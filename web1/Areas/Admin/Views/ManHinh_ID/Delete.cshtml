@@ -1,0 +1,50 @@
+﻿@model web1.Models.ManHinh_ID
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Xóa</h2>
+
+<h3>Bạn có chắc muốn xóa chứ?</h3>
+<div>
+    <h4>Màn hình </h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KichThuoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KichThuoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoPhanGiai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoPhanGiai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TiLeManHinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TiLeManHinh)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-danger" />
+            @Html.ActionLink("Trở về danh sách", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,23 @@
+.card{
+    margin-bottom: 10px;
+}
+
+.image_fix{
+    /* height: 200px; */
+    display: flex;
+    
+}
+.card-image{
+    /* height: 200px;
+    display: flex; */
+}
+
+.card-img-top{
+    height: 200px;
+    margin: auto;
+    object-fit: scale-down;
+}
+.b_button_card{
+    display: flex;
+    justify-content: space-around;
+}

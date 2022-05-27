@@ -1,0 +1,59 @@
+﻿@model web1.Models.Chip_ID
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thông tin chi tiết</h2>
+
+<div>
+    <h4>vi sử lý</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaCore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaCore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Brand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DongChip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DongChip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.XungNhip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.XungNhip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cache)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cache)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Trở về danh sách", "Index")
+</p>

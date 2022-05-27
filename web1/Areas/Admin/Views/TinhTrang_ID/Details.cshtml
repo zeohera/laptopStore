@@ -1,0 +1,27 @@
+﻿@model web1.Models.TinhTrang_ID
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chi tiết</h2>
+
+<div>
+    <h4>Tình trạng</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TinhTrang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TinhTrang)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Trở về danh sách", "Index")
+</p>

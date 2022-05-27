@@ -1,0 +1,43 @@
+﻿@model web1.Models.HoaDon_ID
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chi tiết</h2>
+
+<div>
+    <h4>Hóa đơn</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ThanhTien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThanhTien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KhachHang_ID1.HoTen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KhachHang_ID1.HoTen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhanVien_ID1.HoTen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhanVien_ID1.HoTen)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Trở về danh sách", "Index")
+</p>

@@ -1,0 +1,133 @@
+﻿@model IEnumerable<web1.Models.SanPham_ID>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sản Phẩm</h2>
+
+<p>
+    @Html.ActionLink("Tạo mới sản phẩm", "Create")
+</p>
+
+<div class="row">
+    <nav class="navbar navbar-light bg-light">
+        <form class="form-inline">
+            @using (Html.BeginForm())
+            {
+                <input class="form-control mr-sm-2" type="text" name="KeyWord" value="" />
+                <input class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submit" value="Tim" />
+            }
+        </form>
+    </nav>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            
+            Tên sản phẩm
+        </th>
+        <th>
+            Giá
+            
+        </th>
+        <th>
+            Số lượng
+            
+        </th>
+        <th>
+            Hình ảnh
+        </th>
+        <th>
+            Card đồ họa
+        </th>
+        <th>
+            Vi xử lý
+        </th>
+        <th>
+            loại 
+        </th>
+        <th>
+            Màn hình
+        </th>
+        <th>
+            Nhà sản xuất
+        </th>
+        <th>
+            Lưu trữ
+        </th>
+        <th>
+            RAM
+        </th>
+        <th>
+            Tình trạng
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenSanPham)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuong)
+        </td>
+        
+        <td>
+            <img src="@Url.Content("~/Assets/images/" + item.image)" class="card-img-top" style="width: 120px" alt="...">
+            @Html.DisplayFor(modelItem => item.image)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CardDoHoa.Ten)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Chip_ID1.MaCore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Loai_ID1.Loai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ManHinh_ID1.DoPhanGiai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhaSanXuat_ID1.TenNhaSanXuat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OCung_ID1.DungLuong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RAM_ID1.DungLuong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TinhTrang_ID1.TinhTrang)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
+<div class="row">
+    <nav aria-label="Page navigation" class="mx-auto" ">
+        <ul class="pagination >
+            @if (@ViewBag.NumPages != null && @ViewBag.NumPages > 1)
+            {
+                <li class="page-item"><a class="page-link" href="SanPham_ID?page=1"><<</a></li>
+                for (int i = 1; i <= @ViewBag.NumPages; i++)
+                {
+                    <li class="page-item"><a class="page-link" href="SanPham_ID?page=@i">@i</a></li>
+                }
+                <li class="page-item"><a class="page-link" href="SanPham_ID?page=@ViewBag.NumPages">>></a></li>
+            }
+
+        </ul>
+    </nav>
+</div>

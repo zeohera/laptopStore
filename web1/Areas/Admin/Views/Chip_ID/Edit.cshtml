@@ -1,0 +1,70 @@
+﻿@model web1.Models.Chip_ID
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sửa </h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Vi sử lý</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ID)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MaCore, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MaCore, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MaCore, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Brand, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Brand, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Brand, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DongChip, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DongChip, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DongChip, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.XungNhip, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.XungNhip, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.XungNhip, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Cache, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Cache, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Cache, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Lưu" class="btn btn-outline-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Trở về trang chủ", "Index")
+</div>

@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using web1.Controllers
+
+<div class="row">
+    <h1>Giỏ hàng</h1>
+    <hr />
+</div>
+<div class="row">
+    <div class="col-md-9">
+        @{
+            int tong = 0;
+        }
+        @foreach (Item item in (List<Item>)Session["cart"])
+        {
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="@Url.Content("~/Assets/images/" + @item.Pr.image)" class="img_cart" alt="https://img.freepik.com/free-vector/vector-hand-draw-isolated-laptop_266838-159.jpg?size=626&ext=jpg">
+                </div>
+                <div class="col-md-6">
+                    <h5>@item.Pr.TenSanPham</h5>
+                    <h6>@item.Pr.Cong</h6>
+                    <hr>
+                    <a class="btn btn-sm btn-danger" href="@Url.Action("Delete", "ShoppingCart", new { id = item.Pr.ID }, null)">xóa</a>
+                    
+                </div>
+                <div class="col-md-3">
+                    <h4>@item.Pr.Gia</h4>
+                   @{ tong += @item.Pr.Gia.Value; }
+                </div>
+            </div>
+            <hr>
+        }
+    </div>
+    <div class="col-md-3">
+        <div class="tien">
+            <h6 class="tien_label">Thành tiền</h6>
+            <p class="thanhtien">@tong</p>
+        </div>
+        <button class="btn btn-key-color btn_100">Tiến hành thanh toán</button>
+    </div>
+</div>

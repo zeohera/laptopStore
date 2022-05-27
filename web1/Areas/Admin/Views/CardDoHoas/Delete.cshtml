@@ -1,0 +1,41 @@
+﻿@model web1.Models.CardDoHoa
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Xóa</h2>
+
+<h3>Bạn có chắc là muốn xóa thông tin này chứ ?</h3>
+<div>
+    <h4>Card đồ họa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ten)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Brand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brand)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-danger" />
+            @Html.ActionLink("Trở về danh sách", "Index")
+        </div>
+    }
+</div>

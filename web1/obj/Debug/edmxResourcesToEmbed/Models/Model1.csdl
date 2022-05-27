@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="webnangcaoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="webnangcaoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CardDoHoa" EntityType="webnangcaoModel.CardDoHoa" />
+    <EntitySet Name="Chip_ID" EntityType="webnangcaoModel.Chip_ID" />
+    <EntitySet Name="ChiTietHD" EntityType="webnangcaoModel.ChiTietHD" />
+    <EntitySet Name="HoaDon_ID" EntityType="webnangcaoModel.HoaDon_ID" />
+    <EntitySet Name="KhachHang_ID" EntityType="webnangcaoModel.KhachHang_ID" />
+    <EntitySet Name="Loai_ID" EntityType="webnangcaoModel.Loai_ID" />
+    <EntitySet Name="ManHinh_ID" EntityType="webnangcaoModel.ManHinh_ID" />
+    <EntitySet Name="NhanVien_ID" EntityType="webnangcaoModel.NhanVien_ID" />
+    <EntitySet Name="NhaSanXuat_ID" EntityType="webnangcaoModel.NhaSanXuat_ID" />
+    <EntitySet Name="OCung_ID" EntityType="webnangcaoModel.OCung_ID" />
+    <EntitySet Name="RAM_ID" EntityType="webnangcaoModel.RAM_ID" />
+    <EntitySet Name="SanPham_ID" EntityType="webnangcaoModel.SanPham_ID" />
+    <EntitySet Name="sysdiagrams" EntityType="webnangcaoModel.sysdiagrams" />
+    <EntitySet Name="TinhTrang_ID" EntityType="webnangcaoModel.TinhTrang_ID" />
+    <AssociationSet Name="FK_SanPham_ID_CardDoHoa" Association="webnangcaoModel.FK_SanPham_ID_CardDoHoa">
+      <End Role="CardDoHoa" EntitySet="CardDoHoa" />
+      <End Role="SanPham_ID" EntitySet="SanPham_ID" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SanPham_ID_Chip_ID" Association="webnangcaoModel.FK_SanPham_ID_Chip_ID">
+      <End Role="Chip_ID" EntitySet="Chip_ID" />
+      <End Role="SanPham_ID" EntitySet="SanPham_ID" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChiTietHD_HoaDon_ID" Association="webnangcaoModel.FK_ChiTietHD_HoaDon_ID">
+      <End Role="HoaDon_ID" EntitySet="HoaDon_ID" />
+      <End Role="ChiTietHD" EntitySet="ChiTietHD" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChiTietHD_SanPham_ID" Association="webnangcaoModel.FK_ChiTietHD_SanPham_ID">
+      <End Role="SanPham_ID" EntitySet="SanPham_ID" />
+      <End Role="ChiTietHD" EntitySet="ChiTietHD" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoaDon_ID_KhachHang_ID" Association="webnangcaoModel.FK_HoaDon_ID_KhachHang_ID">
+      <End Role="KhachHang_ID" EntitySet="KhachHang_ID" />
+      <End Role="HoaDon_ID" EntitySet="HoaDon_ID" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoaDon_ID_NhanVien_ID" Association="webnangcaoModel.FK_HoaDon_ID_NhanVien_ID">
+      <End Role="NhanVien_ID" EntitySet="NhanVien_ID" />
+      <End Role="HoaDon_ID" EntitySet="HoaDon_ID" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SanPham_ID_Loai_ID" Association="webnangcaoModel.FK_SanPham_ID_Loai_ID">
+      <End Role="Loai_ID" EntitySet="Loai_ID" />
+      <End Role="SanPham_ID" EntitySet="SanPham_ID" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SanPham_ID_ManHinh_ID" Association="webnangcaoModel.FK_SanPham_ID_ManHinh_ID">
+      <End Role="ManHinh_ID" EntitySet="ManHinh_ID" />
+      <End Role="SanPham_ID" EntitySet="SanPham_ID" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SanPham_ID_NhaSanXuat_ID" Association="webnangcaoModel.FK_SanPham_ID_NhaSanXuat_ID">
+      <End Role="NhaSanXuat_ID" EntitySet="NhaSanXuat_ID" />
+      <End Role="SanPham_ID" EntitySet="SanPham_ID" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SanPham_ID_OCung_ID" Association="webnangcaoModel.FK_SanPham_ID_OCung_ID">
+      <End Role="OCung_ID" EntitySet="OCung_ID" />
+      <End Role="SanPham_ID" EntitySet="SanPham_ID" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SanPham_ID_RAM_ID" Association="webnangcaoModel.FK_SanPham_ID_RAM_ID">
+      <End Role="RAM_ID" EntitySet="RAM_ID" />
+      <End Role="SanPham_ID" EntitySet="SanPham_ID" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SanPham_ID_TinhTrang_ID" Association="webnangcaoModel.FK_SanPham_ID_TinhTrang_ID">
+      <End Role="TinhTrang_ID" EntitySet="TinhTrang_ID" />
+      <End Role="SanPham_ID" EntitySet="SanPham_ID" />
+    </AssociationSet>
+    <EntitySet Name="Account" EntityType="webnangcaoModel.Account" />
+    <EntitySet Name="Order" EntityType="webnangcaoModel.Order" />
+    <EntitySet Name="Order_detail" EntityType="webnangcaoModel.Order_detail" />
+  </EntityContainer>
+  <EntityType Name="CardDoHoa">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ten" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SanPham_ID" Relationship="webnangcaoModel.FK_SanPham_ID_CardDoHoa" FromRole="CardDoHoa" ToRole="SanPham_ID" />
+  </EntityType>
+  <EntityType Name="Chip_ID">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaCore" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Brand" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="DongChip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="XungNhip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Cache" Type="Int32" />
+    <NavigationProperty Name="SanPham_ID" Relationship="webnangcaoModel.FK_SanPham_ID_Chip_ID" FromRole="Chip_ID" ToRole="SanPham_ID" />
+  </EntityType>
+  <EntityType Name="ChiTietHD">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SanPhamID" Type="Int32" />
+    <Property Name="HoaDonID" Type="Int32" />
+    <Property Name="SoLuong" Type="Int32" />
+    <NavigationProperty Name="HoaDon_ID" Relationship="webnangcaoModel.FK_ChiTietHD_HoaDon_ID" FromRole="ChiTietHD" ToRole="HoaDon_ID" />
+    <NavigationProperty Name="SanPham_ID" Relationship="webnangcaoModel.FK_ChiTietHD_SanPham_ID" FromRole="ChiTietHD" ToRole="SanPham_ID" />
+  </EntityType>
+  <EntityType Name="HoaDon_ID">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NhanVien_ID" Type="Int32" />
+    <Property Name="KhachHang_ID" Type="Int32" />
+    <Property Name="ThanhTien" Type="Int32" />
+    <NavigationProperty Name="ChiTietHD" Relationship="webnangcaoModel.FK_ChiTietHD_HoaDon_ID" FromRole="HoaDon_ID" ToRole="ChiTietHD" />
+    <NavigationProperty Name="KhachHang_ID1" Relationship="webnangcaoModel.FK_HoaDon_ID_KhachHang_ID" FromRole="HoaDon_ID" ToRole="KhachHang_ID" />
+    <NavigationProperty Name="NhanVien_ID1" Relationship="webnangcaoModel.FK_HoaDon_ID_NhanVien_ID" FromRole="HoaDon_ID" ToRole="NhanVien_ID" />
+  </EntityType>
+  <EntityType Name="KhachHang_ID">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoTen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SoDienThoai" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HoaDon_ID" Relationship="webnangcaoModel.FK_HoaDon_ID_KhachHang_ID" FromRole="KhachHang_ID" ToRole="HoaDon_ID" />
+  </EntityType>
+  <EntityType Name="Loai_ID">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Loai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SanPham_ID" Relationship="webnangcaoModel.FK_SanPham_ID_Loai_ID" FromRole="Loai_ID" ToRole="SanPham_ID" />
+  </EntityType>
+  <EntityType Name="ManHinh_ID">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KichThuoc" Type="Double" />
+    <Property Name="DoPhanGiai" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TiLeManHinh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SanPham_ID" Relationship="webnangcaoModel.FK_SanPham_ID_ManHinh_ID" FromRole="ManHinh_ID" ToRole="SanPham_ID" />
+  </EntityType>
+  <EntityType Name="NhanVien_ID">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoTen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ChucVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HoaDon_ID" Relationship="webnangcaoModel.FK_HoaDon_ID_NhanVien_ID" FromRole="NhanVien_ID" ToRole="HoaDon_ID" />
+  </EntityType>
+  <EntityType Name="NhaSanXuat_ID">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenNhaSanXuat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SanPham_ID" Relationship="webnangcaoModel.FK_SanPham_ID_NhaSanXuat_ID" FromRole="NhaSanXuat_ID" ToRole="SanPham_ID" />
+  </EntityType>
+  <EntityType Name="OCung_ID">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DungLuong" Type="Int32" />
+    <Property Name="Loai" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SanPham_ID" Relationship="webnangcaoModel.FK_SanPham_ID_OCung_ID" FromRole="OCung_ID" ToRole="SanPham_ID" />
+  </EntityType>
+  <EntityType Name="RAM_ID">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DungLuong" Type="Int32" />
+    <Property Name="Bus" Type="Int32" />
+    <Property Name="Loai" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SanPham_ID" Relationship="webnangcaoModel.FK_SanPham_ID_RAM_ID" FromRole="RAM_ID" ToRole="SanPham_ID" />
+  </EntityType>
+  <EntityType Name="SanPham_ID">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenSanPham" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Gia" Type="Int32" />
+    <Property Name="NhaSanXuat_ID" Type="Int32" />
+    <Property Name="Loai_ID" Type="Int32" />
+    <Property Name="ManHinh_ID" Type="Int32" />
+    <Property Name="Ram_ID" Type="Int32" />
+    <Property Name="OCung_ID" Type="Int32" />
+    <Property Name="Chip_ID" Type="Int32" />
+    <Property Name="TinhTrang_ID" Type="Int32" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="CardDoHoa_ID" Type="Int32" />
+    <Property Name="Cong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="image" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CardDoHoa" Relationship="webnangcaoModel.FK_SanPham_ID_CardDoHoa" FromRole="SanPham_ID" ToRole="CardDoHoa" />
+    <NavigationProperty Name="Chip_ID1" Relationship="webnangcaoModel.FK_SanPham_ID_Chip_ID" FromRole="SanPham_ID" ToRole="Chip_ID" />
+    <NavigationProperty Name="ChiTietHD" Relationship="webnangcaoModel.FK_ChiTietHD_SanPham_ID" FromRole="SanPham_ID" ToRole="ChiTietHD" />
+    <NavigationProperty Name="Loai_ID1" Relationship="webnangcaoModel.FK_SanPham_ID_Loai_ID" FromRole="SanPham_ID" ToRole="Loai_ID" />
+    <NavigationProperty Name="ManHinh_ID1" Relationship="webnangcaoModel.FK_SanPham_ID_ManHinh_ID" FromRole="SanPham_ID" ToRole="ManHinh_ID" />
+    <NavigationProperty Name="NhaSanXuat_ID1" Relationship="webnangcaoModel.FK_SanPham_ID_NhaSanXuat_ID" FromRole="SanPham_ID" ToRole="NhaSanXuat_ID" />
+    <NavigationProperty Name="OCung_ID1" Relationship="webnangcaoModel.FK_SanPham_ID_OCung_ID" FromRole="SanPham_ID" ToRole="OCung_ID" />
+    <NavigationProperty Name="RAM_ID1" Relationship="webnangcaoModel.FK_SanPham_ID_RAM_ID" FromRole="SanPham_ID" ToRole="RAM_ID" />
+    <NavigationProperty Name="TinhTrang_ID1" Relationship="webnangcaoModel.FK_SanPham_ID_TinhTrang_ID" FromRole="SanPham_ID" ToRole="TinhTrang_ID" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TinhTrang_ID">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TinhTrang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SanPham_ID" Relationship="webnangcaoModel.FK_SanPham_ID_TinhTrang_ID" FromRole="TinhTrang_ID" ToRole="SanPham_ID" />
+  </EntityType>
+  <Association Name="FK_SanPham_ID_CardDoHoa">
+    <End Type="webnangcaoModel.CardDoHoa" Role="CardDoHoa" Multiplicity="0..1" />
+    <End Type="webnangcaoModel.SanPham_ID" Role="SanPham_ID" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CardDoHoa">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SanPham_ID">
+        <PropertyRef Name="CardDoHoa_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SanPham_ID_Chip_ID">
+    <End Type="webnangcaoModel.Chip_ID" Role="Chip_ID" Multiplicity="0..1" />
+    <End Type="webnangcaoModel.SanPham_ID" Role="SanPham_ID" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chip_ID">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SanPham_ID">
+        <PropertyRef Name="Chip_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChiTietHD_HoaDon_ID">
+    <End Type="webnangcaoModel.HoaDon_ID" Role="HoaDon_ID" Multiplicity="0..1" />
+    <End Type="webnangcaoModel.ChiTietHD" Role="ChiTietHD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HoaDon_ID">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ChiTietHD">
+        <PropertyRef Name="HoaDonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChiTietHD_SanPham_ID">
+    <End Type="webnangcaoModel.SanPham_ID" Role="SanPham_ID" Multiplicity="0..1" />
+    <End Type="webnangcaoModel.ChiTietHD" Role="ChiTietHD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham_ID">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ChiTietHD">
+        <PropertyRef Name="SanPhamID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoaDon_ID_KhachHang_ID">
+    <End Type="webnangcaoModel.KhachHang_ID" Role="KhachHang_ID" Multiplicity="0..1" />
+    <End Type="webnangcaoModel.HoaDon_ID" Role="HoaDon_ID" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang_ID">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HoaDon_ID">
+        <PropertyRef Name="KhachHang_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoaDon_ID_NhanVien_ID">
+    <End Type="webnangcaoModel.NhanVien_ID" Role="NhanVien_ID" Multiplicity="0..1" />
+    <End Type="webnangcaoModel.HoaDon_ID" Role="HoaDon_ID" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien_ID">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HoaDon_ID">
+        <PropertyRef Name="NhanVien_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SanPham_ID_Loai_ID">
+    <End Type="webnangcaoModel.Loai_ID" Role="Loai_ID" Multiplicity="0..1" />
+    <End Type="webnangcaoModel.SanPham_ID" Role="SanPham_ID" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loai_ID">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SanPham_ID">
+        <PropertyRef Name="Loai_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SanPham_ID_ManHinh_ID">
+    <End Type="webnangcaoModel.ManHinh_ID" Role="ManHinh_ID" Multiplicity="0..1" />
+    <End Type="webnangcaoModel.SanPham_ID" Role="SanPham_ID" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ManHinh_ID">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SanPham_ID">
+        <PropertyRef Name="ManHinh_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SanPham_ID_NhaSanXuat_ID">
+    <End Type="webnangcaoModel.NhaSanXuat_ID" Role="NhaSanXuat_ID" Multiplicity="0..1" />
+    <End Type="webnangcaoModel.SanPham_ID" Role="SanPham_ID" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhaSanXuat_ID">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SanPham_ID">
+        <PropertyRef Name="NhaSanXuat_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SanPham_ID_OCung_ID">
+    <End Type="webnangcaoModel.OCung_ID" Role="OCung_ID" Multiplicity="0..1" />
+    <End Type="webnangcaoModel.SanPham_ID" Role="SanPham_ID" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OCung_ID">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SanPham_ID">
+        <PropertyRef Name="OCung_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SanPham_ID_RAM_ID">
+    <End Type="webnangcaoModel.RAM_ID" Role="RAM_ID" Multiplicity="0..1" />
+    <End Type="webnangcaoModel.SanPham_ID" Role="SanPham_ID" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RAM_ID">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SanPham_ID">
+        <PropertyRef Name="Ram_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SanPham_ID_TinhTrang_ID">
+    <End Type="webnangcaoModel.TinhTrang_ID" Role="TinhTrang_ID" Multiplicity="0..1" />
+    <End Type="webnangcaoModel.SanPham_ID" Role="SanPham_ID" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TinhTrang_ID">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SanPham_ID">
+        <PropertyRef Name="TinhTrang_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="Customer" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ShipName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ShipMobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ShipEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Order_detail">
+    <Key>
+      <PropertyRef Name="ProductID" />
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="ProductID" Type="Int64" Nullable="false" />
+    <Property Name="OrderID" Type="Int64" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+</Schema>

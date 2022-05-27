@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ece13a774583462e9c3bc11bc6b8dc63" Name="Diagram1" ZoomLevel="52">
+        <EntityTypeShape EntityType="webnangcaoModel.CardDoHoa" Width="1.5" PointX="0.75" PointY="6.375" />
+        <EntityTypeShape EntityType="webnangcaoModel.Chip_ID" Width="1.5" PointX="0.75" PointY="2.625" />
+        <EntityTypeShape EntityType="webnangcaoModel.ChiTietHD" Width="1.5" PointX="5.25" PointY="2.75" />
+        <EntityTypeShape EntityType="webnangcaoModel.HoaDon_ID" Width="1.5" PointX="3" PointY="25.625" />
+        <EntityTypeShape EntityType="webnangcaoModel.KhachHang_ID" Width="1.5" PointX="0.75" PointY="27.125" />
+        <EntityTypeShape EntityType="webnangcaoModel.Loai_ID" Width="1.5" PointX="0.75" PointY="11.25" />
+        <EntityTypeShape EntityType="webnangcaoModel.ManHinh_ID" Width="1.5" PointX="0.75" PointY="13.625" />
+        <EntityTypeShape EntityType="webnangcaoModel.NhanVien_ID" Width="1.5" PointX="0.75" PointY="24.5" />
+        <EntityTypeShape EntityType="webnangcaoModel.NhaSanXuat_ID" Width="1.5" PointX="0.75" PointY="8.875" />
+        <EntityTypeShape EntityType="webnangcaoModel.OCung_ID" Width="1.5" PointX="0.75" PointY="16.375" />
+        <EntityTypeShape EntityType="webnangcaoModel.RAM_ID" Width="1.5" PointX="0.75" PointY="21.375" />
+        <EntityTypeShape EntityType="webnangcaoModel.SanPham_ID" Width="1.5" PointX="3" PointY="1.125" />
+        <EntityTypeShape EntityType="webnangcaoModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="5.75" />
+        <EntityTypeShape EntityType="webnangcaoModel.TinhTrang_ID" Width="1.5" PointX="0.75" PointY="19" />
+        <AssociationConnector Association="webnangcaoModel.FK_SanPham_ID_CardDoHoa" />
+        <AssociationConnector Association="webnangcaoModel.FK_SanPham_ID_Chip_ID" />
+        <AssociationConnector Association="webnangcaoModel.FK_ChiTietHD_HoaDon_ID" />
+        <AssociationConnector Association="webnangcaoModel.FK_ChiTietHD_SanPham_ID" />
+        <AssociationConnector Association="webnangcaoModel.FK_HoaDon_ID_KhachHang_ID" />
+        <AssociationConnector Association="webnangcaoModel.FK_HoaDon_ID_NhanVien_ID" />
+        <AssociationConnector Association="webnangcaoModel.FK_SanPham_ID_Loai_ID" />
+        <AssociationConnector Association="webnangcaoModel.FK_SanPham_ID_ManHinh_ID" />
+        <AssociationConnector Association="webnangcaoModel.FK_SanPham_ID_NhaSanXuat_ID" />
+        <AssociationConnector Association="webnangcaoModel.FK_SanPham_ID_OCung_ID" />
+        <AssociationConnector Association="webnangcaoModel.FK_SanPham_ID_RAM_ID" />
+        <AssociationConnector Association="webnangcaoModel.FK_SanPham_ID_TinhTrang_ID" />
+        <EntityTypeShape EntityType="webnangcaoModel.Account" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="webnangcaoModel.Order" Width="1.5" PointX="8.375" PointY="3.75" />
+        <EntityTypeShape EntityType="webnangcaoModel.Order_detail" Width="1.5" PointX="3.375" PointY="8.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

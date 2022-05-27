@@ -1,0 +1,18 @@
+.btn-key-color{
+    background: rgb(192,46,136);
+    background: linear-gradient(0deg, rgba(192,46,136,1) 28%, rgba(219,98,173,1) 76%);
+    color: white;
+}
+.btn_100{
+    width: 100%;
+}
+.tien{
+    display: flex;
+    justify-content: space-between;
+}
+.thanhtien{
+    color: red;
+}
+.img_cart{
+    height: 150px;
+}
